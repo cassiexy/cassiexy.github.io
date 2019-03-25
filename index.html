@@ -112,6 +112,13 @@
       color:rgb(128, 11, 4);
       transition: ease 1s;
     }
+
+    .image{
+      opacity: 0.8
+    }
+    .graph{
+      
+    }
   </style>
 
 </head>
@@ -121,19 +128,18 @@
   <div class="overlay hidden animated">
     <div class="row">
       <div class="col-4 box animated">
-        <h1>HELLO</h1>
+        <h1></h1>
+        <img class="image" src="/assets/images/graph2.png" width="200"/>
         <div>
           <h2 style="text-align:center;">Introduction</h2>
           <p style="text-align:center;"><br>
           </p>
         </div>
       </div>
-      <div class="col-8 box2 animated">
-        <h1 style="text-align:center;"></h1>
-        <ul>
-        <li></li>
-        <li></li>
-        </ul>
+      <div class="col-8 box2 animated text-right">
+        <img src="/assets/images/github.svg" width="200"/>
+        <img class="graph" src="/assets/images/graph3.png" width="200"/>
+        <h1 style="text-align:center;"><a href="https://github.com/cassiexy">github account</a></h1>
       </div>
       <div class="col-8 box3 animated">
         <div class="box3-content">
@@ -224,6 +230,7 @@ $(document).ready(function() {
     $bt.addClass("tada animated delay-1s");
     $bt2.addClass("tada animated delay-1s");
     $bt3.addClass("heartBeat animated delay-1s");
+    $pagetitle.addClass("hidden")
   });
 
   $(".bt").click(function () {
@@ -246,8 +253,7 @@ $(document).ready(function() {
 
   $("#toggler").click(function () {
     $(".overlay").toggleClass("hidden");
-    $("")
-    $(".pagetitle").text("Cassie Xu");
+    $(".pagetitle").toggleClass("hidden")
   })
 
 
